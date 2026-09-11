@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=6.0"
+  esp_rt_diagnostics:
+    git: https://github.com/smartsensingme/esp_rt_diagnostics.git
+    version: 0a9bdc9cf6d2b6c43e6da704d6e8674a49c0c2d3

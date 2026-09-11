@@ -13,6 +13,23 @@ AI coding agents can use `AGENTS.md` in this directory as an evidence-based
 procedure for instrumenting a task, interpreting losses and overruns, separating
 observer effects, and proposing the next controlled timing experiment.
 
+## Installation
+
+Add only the reporter to the consuming application's
+`main/idf_component.yml`:
+
+```yaml
+dependencies:
+  esp_rt_diagnostics_reporter:
+    git: https://github.com/smartsensingme/esp_rt_diagnostics_reporter.git
+```
+
+The reporter's own `idf_component.yml` pins and downloads the compatible
+`esp_rt_diagnostics` revision automatically. The application does not need to
+know or repeat that transitive dependency. `CMakeLists.txt` still declares the
+compile/link relationship through `REQUIRES`; the two files serve different
+parts of the ESP-IDF build process.
+
 ## Division of responsibilities
 
 ```text
